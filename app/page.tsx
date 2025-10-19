@@ -1,31 +1,24 @@
 "use client";
 
-import { Inter } from "@next/font/google";
 import { useEffect, useState } from "react";
-const inter = Inter({ subsets: ["latin"] });
+import type { Company } from "../types";
+import CompanyList from "../components/CompanyList";
+import PageTitle from "../components/PageTitle";
+import { fetchData } from "../lib/api/companies";
 
 export default function Home() {
-  const [stuff1, setStuff1] = useState<any>([]);
-  useEffect(() => {
-    // declare the data fetching function
-    const fetchData = async () => {
-      const data = await fetch("/api/companies");
-      const data2 = await data.json();
-      console.log(data2);
-      setStuff1(data2);
-    };
+  const [companies, setCompanies] = useState<Company[]>([]);
 
-    // call the function
+  useEffect(() => {
     fetchData()
-      // make sure to catch any error
+      .then(setCompanies)
       .catch(console.error);
   }, []);
 
   return (
     <main>
-      <h2 className={inter.className}>Quartr</h2>
-      <p className={inter.className}>Trending companies</p>
-      <p>{JSON.stringify(stuff1)}</p>
+      <PageTitle />
+      <CompanyList companies={companies} />
     </main>
   );
 }

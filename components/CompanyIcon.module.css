@@ -1,0 +1,13 @@
+.company_icon {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--company-icon-bg, transparent);
+}

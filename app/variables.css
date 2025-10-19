@@ -1,0 +1,9 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #F2F2F2;
+  --dark-gray: #999999;
+  /*  */
+  --item-heading-color: #010101;
+  --item-description-color: var(--dark-gray);
+}

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--item-heading-color);
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--item-description-color);
+  margin: 0;
+  padding: 0;
+}

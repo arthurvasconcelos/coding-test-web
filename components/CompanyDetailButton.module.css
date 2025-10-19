@@ -1,0 +1,29 @@
+.link_icon {
+  color: var(--dark-gray);
+}
+
+.detail_link {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 10px;
+  flex-shrink: 0;
+
+  /*
+   * I would like to use CSS native nesting here but it seems like older
+   * versions of NEXT do not support it.
+   */
+  /* &:hover {
+    &.link_icon {
+      color: var(--black);
+    }
+  } */
+}
+
+.detail_link:hover .link_icon {
+  color: var(--black);
+}
